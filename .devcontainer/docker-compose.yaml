@@ -1,0 +1,14 @@
+version: "3.8"
+
+services:
+    devcontainer:
+        container_name: my-notes-app-devcontainer
+        build:
+            context: .
+            dockerfile: Dockerfile
+        volumes:
+            - ..:/workspace
+        ports:
+            - "3000:3000"
+            - "5000:5000"
+        command: bash
