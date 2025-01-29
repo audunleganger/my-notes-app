@@ -1,0 +1,17 @@
+{
+    "name": "my-notes-app dev container",
+    "dockerComposeFile": "docker-compose.yaml",
+    "service": "workspace",
+    "workspaceFolder": "/workspace",
+    "settings": {
+        "terminal.integrated.defaultProfile.linux": "bash"
+    },
+    "extensions": [
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        "ms-azuretools.vscode-docker",
+        "ms-vscode.vscode-typescript-tslint-plugin"
+    ],
+    "remoteUser": "node",
+    "postCreateCommand": "npm install -g typescript && cd frontend && npm install && cd ../backend && npm install"
+}
